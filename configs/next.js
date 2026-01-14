@@ -1,5 +1,1 @@
-module.exports = {
-  extends: [
-    require.resolve('./react'),
-  ]
-};
+module.exports = [...require("./react")];

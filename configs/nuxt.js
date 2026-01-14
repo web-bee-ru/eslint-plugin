@@ -1,10 +1,9 @@
-module.exports = {
-  extends: [
-    require.resolve('./vue'),
-  ],
-  settings: {
-    'import/resolver': 'nuxt',
+/** @type {import('eslint').Linter.FlatConfig[]} */
+module.exports = [
+  ...require("./vue"),
+  {
+    settings: {
+      "import/resolver": "nuxt",
+    },
   },
-  overrides: [
-  ]
-};
+];
