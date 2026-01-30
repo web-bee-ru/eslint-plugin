@@ -1,10 +1,11 @@
-module.exports = {
-  extends: [
-    require.resolve('./vue'),
-  ],
-  settings: {
-    'import/resolver': 'nuxt',
+import { defineConfig } from 'eslint/config';
+import vue from './vue';
+
+export default defineConfig([
+  {
+    extends: [vue],
+    settings: {
+      'import/resolver': 'nuxt',
+    },
   },
-  overrides: [
-  ]
-};
+]);

@@ -1,4 +1,6 @@
 .idea
 .vscode/
+.tsup
 /node_modules
 package-lock.json
+/dist

@@ -2,8 +2,9 @@
   "name": "@web-bee-ru/eslint-plugin",
   "version": "0.6.4",
   "description": "Our eslint config for projects",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "standard-version"
   },
@@ -14,19 +15,83 @@
   "homepage": "https://github.com/web-bee-ru/eslint-plugin",
   "author": "dev@web-bee.ru",
   "license": "ISC",
+  "files": [
+    "dist/**/*",
+    "CHANGELOG.md",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/types/base.d.ts",
+      "import": "./dist/base.js",
+      "require": "./dist/base.cjs"
+    },
+    "./react": {
+      "types": "./dist/types/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./next": {
+      "types": "./dist/types/next.d.ts",
+      "import": "./dist/next.js",
+      "require": "./dist/next.cjs"
+    },
+    "./vue": {
+      "types": "./dist/types/vue.d.ts",
+      "import": "./dist/vue.js",
+      "require": "./dist/vue.cjs"
+    },
+    "./nuxt": {
+      "types": "./dist/types/nuxt.d.ts",
+      "import": "./dist/nuxt.js",
+      "require": "./dist/nuxt.cjs"
+    }
+  },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.8.0",
-    "@typescript-eslint/parser": "^3.8.0",
-    "eslint": "^7.23.0",
-    "eslint-config-prettier": "^8.3.0",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "eslint": "^9.25.0",
+    "eslint-config-prettier": "^10.1.2",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-node": "^0.3.4",
     "eslint-import-resolver-nuxt": "^1.0.1",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.20.5",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "eslint-plugin-vue": "^7.9.0",
-    "standard-version": "^9.3.2"
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^14.0.0",
+    "standard-version": "^9.3.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.31.1"
+  },
+  "peerDependencies": {
+    "@stylistic/eslint-plugin": ">=4",
+    "eslint": ">=9",
+    "eslint-config-prettier": ">=10",
+    "eslint-import-resolver-alias": ">=1.1.2",
+    "eslint-import-resolver-node": ">=0.3.9",
+    "eslint-import-resolver-nuxt": ">=1",
+    "eslint-plugin-import": ">=2.30",
+    "eslint-plugin-prettier": ">=5.2",
+    "eslint-plugin-react": ">=7.37",
+    "eslint-plugin-react-hooks": ">=5.2",
+    "eslint-plugin-vue": ">=10",
+    "globals": ">=14",
+    "typescript-eslint": ">=8"
+  },
+  "peerDependenciesMeta": {
+    "eslint-plugin-vue": {
+      "optional": true
+    },
+    "eslint-import-resolver-nuxt": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    }
   }
 }
