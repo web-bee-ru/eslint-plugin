@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.5](https://github.com/web-bee-ru/eslint-plugin/compare/v0.6.4...v0.6.5) (2026-01-30)
+
+
+### Features
+
+* **DEVTASKS-67:** конфиг обновлён под 9 версию eslint ([03285bc](https://github.com/web-bee-ru/eslint-plugin/commit/03285bc86925f54fe03dbc61701545939d942120))
+
 ### [0.6.4](https://github.com/web-bee-ru/eslint-plugin/compare/v0.6.3...v0.6.4) (2025-04-13)
 
 

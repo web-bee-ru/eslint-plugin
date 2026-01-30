@@ -1,6 +1,6 @@
 {
   "name": "@web-bee-ru/eslint-plugin",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "Our eslint config for projects",
   "type": "module",
   "scripts": {
